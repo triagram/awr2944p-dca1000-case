@@ -5,18 +5,21 @@ English | [简体中文](README.zh-CN.md)
 A 3D-printed PLA case for a TI AWR2944PEVM radar board and a DCA1000EVM capture card.
 The front guard stays on while you measure.
 
-This is v3.0. The latest version is on the `main` branch; every version is a git tag with its own
-files and instructions, and the tag message says what changed.
+![The assembled case and an exploded view](images/overview.png)
+
+This is v3.1, the latest version. Every earlier version is a git tag (`v1.0` to `v3.0`)
+with its own files and instructions; the tag message says what changed.
 
 ## What it is
 
 - The two boards stand one behind the other: the DCA1000 at the back, resting on 4 posts;
   the radar board in front, antenna facing out. They are 20 mm apart.
-- Case 138 × 141 × 56 mm (width × height × depth); on the desk foot about 150 × 146 × 120 mm.
+- Case 138 × 141 × 56 mm (width × height × depth). On the desk foot about 150 × 146 × 120 mm;
+  without the foot, with the guard and knobs, 138 × 141 × 64 mm.
 - Front guard: a 74 × 42 mm antenna window open to the right, so nothing sits in the antenna beam,
   and a 45 × 37 mm window on the left over the DCA1000 status LEDs. Two hand knobs hold the top left,
   two clips hook inside the right wall, and the lower edge sits behind a rail on the case.
-- Cooling: 18 slots in the back, 8 in the top, 8 intake slots in the guard.
+- Cooling: a honeycomb grid in the back, 13 slots in the top, 8 intake slots in the guard.
 - Tripod: take the desk foot off; a 1/4"-20 nut in the floor takes the tripod screw.
 
 ## Files
@@ -25,7 +28,8 @@ files and instructions, and the tag message says what changed.
 | --- | --- |
 | `stl/` | print files, already in print orientation |
 | `stl/test_fit/` | optional dummy boards for a test fit |
-| `images/` | figures used in the design notes |
+| `step/` | STEP models of the parts, for editing in CAD (modelling frame, not print orientation) |
+| `images/` | figures used in this README |
 | `design/` | why the case is built this way |
 
 ## Print
@@ -52,6 +56,8 @@ Settings (made for a Bambu Lab A1 with a 0.4 mm nozzle):
 
 ### Print pause in the case body
 
+![The two hex pockets at the print pause](images/print_pause.png)
+
 1. After slicing, move the layer slider to the 47.00 mm layer (layer 235 at 0.20 mm, the first layer
    above the two nut pockets) and add a pause there. With another layer height, pause at the first
    layer above 46.8 mm.
@@ -72,7 +78,7 @@ Save the sliced project with the pause as a `.3mf` and print from it next time.
 - M3 nut × 15: 4 in the floor, 1 on the fourth DCA1000 hole, 2 in the knobs, 2 sealed into the case
   at the print pause, 2 in each of the 3 spacers.
 - 1/4"-20 UNC hex nut × 1, optional, for a tripod (11.1 mm across flats).
-- 12 mm self-adhesive rubber feet × 4, optional, under the desk foot.
+- 12 mm self-adhesive rubber feet × 4, optional, in the shallow recesses under the desk foot.
 
 Also needed: the two boards and the 60-pin ribbon cable from the DCA1000 kit. The TI plastic standoffs
 are not used: the boards must be 20 mm apart, or the radar board hits the guard and the side openings
@@ -84,6 +90,8 @@ The case stands on the desk with its opening toward you. Step 1 must come before
 
 ### Step 0: prepare the small parts (once)
 
+![Knobs and spacers](images/step0.png)
+
 1. Knobs × 2: push an M3×20 countersunk into the knob from the side with the cone, put an M3 nut in
    the hex pocket on the other side and tighten with a screwdriver. Screw and knob then turn as one,
    with the screw sticking out about 14 mm.
@@ -92,6 +100,8 @@ The case stands on the desk with its opening toward you. Step 1 must come before
 3. Remove the metal feet TI fitted to the radar board: they take two of its mounting holes.
 
 ### Step 1: nuts in the floor, then the desk foot
+
+![Floor nuts and the desk foot](images/step1.png)
 
 1. Drop 4 M3 nuts into the 4 small hex pockets inside the floor, all the way down. For a tripod,
    put the 1/4" nut into the large pocket in the middle.
@@ -104,6 +114,8 @@ The two rear pockets are behind the DCA1000 once it is in, which is why this ste
 
 ### Step 2: DCA1000
 
+![DCA1000 into the case](images/step2.png)
+
 1. Set the DCA1000 DIP switches first (TI SPRUJ22C, section 2.9); it is easiest before the board
    goes in.
 2. Components toward you, 5 V jack on the left, Ethernet on the right: stand the board in. Its lower
@@ -113,6 +125,8 @@ The two rear pockets are behind the DCA1000 once it is in, which is why this ste
    the case leans back.
 
 ### Step 3: spacers and the 4 back screws
+
+![Spacers on the front, screws from the back](images/step3.png)
 
 Spacers go on the lower left, lower right and upper left holes. The upper right hole only takes a
 screw and a nut: the radar board has no hole there.
@@ -128,6 +142,8 @@ is wider than the real one and only clears in that orientation.
 
 ### Step 4: radar board
 
+![Radar board and the front screws](images/step4.png)
+
 1. Set the radar board SOP jumpers first (TI SPRUJ22C, section 2.9).
 2. Antenna toward you, blue CAN terminal at the bottom, antenna at the upper right: place the board on
    the 3 spacers.
@@ -135,6 +151,8 @@ is wider than the real one and only clears in that orientation.
    clamps the board. Do not use an M3×20 here: it would run into the back screw.
 
 ### Step 5: ribbon cable and the other cables
+
+![Ribbon cable and the side openings](images/step5.png)
 
 1. Ribbon cable: one end into DCA1000 J3 (outside the left edge of the radar board), the other into
    radar J7 (lower left on its front). Let the spare length bulge to the left, beside the radar board,
@@ -147,7 +165,7 @@ is wider than the real one and only clears in that orientation.
    | micro USB to the PC | radar FTDI port J10 | left wall, upper front window (not the rear one) |
    | Ethernet to the PC | DCA1000 J6 | right wall, middle rear cut-out |
    | 12 V supply | radar J12 | right wall, lowest front window |
-   | USB, optional | radar XDS110 port J8 | right wall, front notch |
+   | USB, optional | radar XDS110 port J8 | right wall, front window; plug it in after the radar board is in |
 
 3. Connect power first, then USB: TI notes that plugging USB in first can hold the board in reset.
 4. To unplug the Ethernet cable, press its latch with a finger through the cut-out on the right of
@@ -158,6 +176,8 @@ The radar Ethernet port J9 and the two DCA1000 micro USB ports also have opening
 setup does not use them.
 
 ### Step 6: front guard
+
+![Front guard and the two knobs](images/step6.png)
 
 1. LED window on the left, the two holes at the top left, ribs and clips inward. Hold the guard about
    2 mm above its final position and press it flat on the front: the two clips on the right drop into
@@ -180,17 +200,18 @@ in the middle of the floor. The 4 M3 nuts stay in their pockets while the case s
 ## Design notes
 
 - [design/radar-assessment.md](design/radar-assessment.md): whether the case blocks or reflects the
-  antenna beam, and why the right wall ends in a vertical drop.
+  antenna beam.
+- [design/v3.1-changes.md](design/v3.1-changes.md): the reasons behind each change in v3.1.
 
 ## License
 
 Copyright Mengyuan Liu 2026.
 
-The hardware design files (`stl/`) describe Open Hardware and are licensed under the CERN-OHL-P v2.
-You may redistribute and modify them and make products using them under the terms of the CERN-OHL-P v2
-([LICENSE](LICENSE), https://ohwr.org/cern_ohl_p_v2.txt). They are distributed WITHOUT ANY EXPRESS OR
-IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR
-PURPOSE. Please see the CERN-OHL-P v2 for applicable conditions.
+The hardware design files (`stl/`, `step/`) describe Open Hardware and are licensed under the
+CERN-OHL-P v2. You may redistribute and modify them and make products using them under the terms of
+the CERN-OHL-P v2 ([LICENSE](LICENSE), https://ohwr.org/cern_ohl_p_v2.txt). They are distributed
+WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY AND
+FITNESS FOR A PARTICULAR PURPOSE. Please see the CERN-OHL-P v2 for applicable conditions.
 
 Source location: https://github.com/triagram/awr2944p-dca1000-case
 
