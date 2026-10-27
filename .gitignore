@@ -1,0 +1,10 @@
+# Allowlist: ignore everything, then re-include what the repo tracks
+*
+!*/
+!.gitignore
+!LICENSE
+!*.md
+!*.stl
+!*.step
+!*.png
+!*.jpg
