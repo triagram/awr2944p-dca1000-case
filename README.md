@@ -227,6 +227,8 @@ when you undo it, lift it out with the board and separate them on the bench.
   antenna beam.
 - [design/v3.1-changes.md](design/v3.1-changes.md): the reasons behind each change in v3.1, and
   where a logo fits on the front guard.
+- [design/todo.md](design/todo.md): ideas not built yet: extensions, and an outer package that
+  doubles as a mount.
 
 ## License
 

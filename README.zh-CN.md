@@ -175,6 +175,7 @@
 - [design/v3.2-changes.zh-CN.md](design/v3.2-changes.zh-CN.md)：螺柱、圆垫柱和封进底壁的螺母，让所有螺丝都从正面拧。
 - [design/radar-assessment.zh-CN.md](design/radar-assessment.zh-CN.md)：外壳会不会挡住或反射天线波束。
 - [design/v3.1-changes.zh-CN.md](design/v3.1-changes.zh-CN.md)：v3.1 每项改动的原因，以及前护板上放 logo 的位置。
+- [design/todo.zh-CN.md](design/todo.zh-CN.md)：还没做的想法：扩展，以及兼作安装座的外包装。
 
 ## 许可证
 
