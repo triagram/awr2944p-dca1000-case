@@ -3,8 +3,8 @@
 English | [简体中文](README.zh-CN.md)
 
 A 3D-printed PLA case for a TI AWR2944PEVM radar board and a DCA1000EVM capture card.
-The front guard stays on while you measure. Once four studs are fitted, every screw goes in from
-the front.
+The front guard stays on while you measure. The design aims to have every screw go in from the front
+once the four studs are fitted.
 
 ![The assembled case and an exploded view](images/overview.png)
 
@@ -20,7 +20,7 @@ with its own files and instructions; the tag message says what changed.
 - Front guard: a 74 × 42 mm antenna window open to the right, so nothing sits in the antenna beam,
   and a 45 × 37 mm window on the left over the DCA1000 status LEDs. Two hand knobs hold the top left,
   two clips hook inside the right wall, and the lower edge sits behind a rail on the case.
-- Every nut is sealed into the print at a print pause, so none can fall out.
+- Almost every nut is sealed into the print at a print pause and cannot fall out.
 - "5V" and "12V" are engraved next to the two power jacks: both take the same plug, and 12 V in the
   DCA1000 destroys it.
 - Cooling: a honeycomb grid in the back, 13 slots in the top, 8 intake slots in the guard.
@@ -103,8 +103,8 @@ no longer line up.
 
 ## Assembly
 
-Step 1 is done once. After that the case lies on its back for steps 2 to 4, and every screw goes in
-from the front.
+Step 1 is done once. After that the case lies on its back for steps 2 to 4, and every screw in those
+steps goes in from the front.
 
 ### Step 0: knobs (once)
 
@@ -221,8 +221,8 @@ when you undo it, lift it out with the board and separate them on the bench.
 
 ## Design notes
 
-- [design/v3.2-changes.md](design/v3.2-changes.md): studs, round spacers and sealed floor nuts, so
-  that every screw goes in from the front.
+- [design/v3.2-changes.md](design/v3.2-changes.md): studs, round spacers and sealed floor nuts,
+  meant to let every screw go in from the front.
 - [design/radar-assessment.md](design/radar-assessment.md): whether the case blocks or reflects the
   antenna beam.
 - [design/v3.1-changes.md](design/v3.1-changes.md): the reasons behind each change in v3.1, and

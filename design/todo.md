@@ -27,6 +27,14 @@ Open points for when it is built:
 
 - whether the case needs rails (a new body), or a slide plate on the four floor nuts in place of
   the desk foot is enough;
-- the grooves must not cover the cable openings in the side walls (12 V and USB on the right) or
-  sit in front of the antenna;
+- the grooves must not cover the cable openings in the side walls or sit in front of the antenna.
+  With the radar board alone the cables are 12 V (radar J12) and USB (radar J8), both through the
+  right wall; with the DCA1000 also 5 V (DCA1000 J2) and micro USB (radar J10) through the left
+  wall, and Ethernet (DCA1000 J6) through the right wall;
+- without the DCA1000 the spacers seat on the post tops, about 1.6 mm (the DCA1000's thickness)
+  further back than designed, but the radar board cannot follow them: the round pillar under its
+  upper right corner (top 38.0 mm above the back face, 1.0 mm behind the board as designed) holds
+  that corner about 0.6 mm off the spacers, and tightening the three screws would bend the board.
+  Three printed 1.6 mm shims under the spacers restore the designed height and keep the right-wall
+  openings for J12 and J8 lined up (worked out from the geometry, not test-fitted);
 - how it locks (one option: the v3.2 knob screwed into a sealed nut).
